@@ -1,0 +1,84 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(196, 250, 232);
+}
+h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(238, 78, 78);
+}
+.explica{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: auto;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: auto;
+    font-size: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(7, 7, 7);
+}
+
+.jogo-memoria {
+    height: 950px;
+    width: 950px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px; 
+}
+
+.card {
+    height: calc( 33.333% - 100px);
+    width: calc(25% - 100px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+    border-radius: 8px;
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: all .9s;
+}
+
+.card:active{
+    transform: scale(0.97);
+    transition: all .2s;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 8px;
+  background: rgb(122, 143, 212);
+  backface-visibility: hidden; 
+}
+
+.card-front {
+    transform: rotateY(180deg); 
+}
+
+
+.card.flip {
+    transform: rotateY(180deg)
+}
